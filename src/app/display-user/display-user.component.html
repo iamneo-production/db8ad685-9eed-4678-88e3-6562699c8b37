@@ -1,0 +1,29 @@
+<nav class="navbar">
+<input class="form-control" type="text" name="name"[(ngModel)]="name" (ngModelChange)="Search()"
+placeholder="Enter name to search">
+</nav>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email_Id</th>
+            <th>Phone_No</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.email_id}}</td>
+            <td>{{user.phone_no}}</td>
+            <td>{{user.address}}</td>
+            <td>
+                <button (click) = "updateUser(user.id)" class="btn btn-info"><b>EDIT</b></button>
+                <button (click) = "deleteUser(user.id)" class="btn btn-danger" style="margin-left: 10px"><b>DELETE</b></button>
+                <button (click) = "veiwUser(user.id)" class="btn btn-success" style="margin-left: 10px"><b>VEIW</b></button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
