@@ -1,12 +1,12 @@
-package com.example.demo.controller;
+package com.examly.springapp.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
 
-import com.example.demo.model.Cart;
-import com.example.demo.services.CartService;
+import com.examly.springapp.model.Cart;
+import com.examly.springapp.services.CartService;
 
 import org.springframework.web.bind.annotation.*;
 
