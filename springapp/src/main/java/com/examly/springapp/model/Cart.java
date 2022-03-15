@@ -1,4 +1,4 @@
- package com.example.demo.model;
+ package com.examly.springapp.model;
 
 
 import java.util.Date;
