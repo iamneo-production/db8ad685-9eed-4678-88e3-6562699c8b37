@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.examly.springapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.services.UserService;
+import com.examly.springapp.services.UserService;
 
 @CrossOrigin(origins="*")
 @RestController
