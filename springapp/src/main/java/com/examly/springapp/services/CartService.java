@@ -1,4 +1,4 @@
-package com.example.demo.services;
+package com.examly.springapp.services;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.Cart;
-import com.example.demo.repository.CartRepository;
+import com.examly.springapp.model.Cart;
+import com.examly.springapp.repository.CartRepository;
 
 
 @Service
