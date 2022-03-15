@@ -25,8 +25,8 @@ public class CartService  {
         return cRepository.findAll();
     }
 
-    public void addToCart(Cart cart) {
-		 cRepository.save(cart);
+    public Cart addToCart(Cart cart) {
+		 return cRepository.save(cart);
 	}
 
     public void deleteCartById(Long cartId) {
@@ -36,8 +36,8 @@ public class CartService  {
         }
         cRepository.deleteById(cartId);
     }
-    public void updateCart(Cart cart){
-         cRepository.save(cart);
+    public Cart updateCart(Cart cart){
+         return cRepository.save(cart);
     }
 
 
