@@ -2,6 +2,8 @@ package com.examly.springapp.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,29 +27,33 @@ public class CartController {
 
 	// get all carts
 	@GetMapping("/all")
-	public List<Cart> getAllCarts(){
-		return cService.getAllCarts();
+	public ResponseEntity<List<Cart>> getAllCarts(){
+		List<Cart> cart = cService.getAllCarts();
+		return new ResponseEntity<>(cart,HttpStatus.OK);
 	}	
 
 	
 	// add cart rest api
 	@PostMapping("/add")
-	public void addToCart(@RequestBody Cart cart) {
-        cService.addToCart(cart);
+	public ResponseEntity<Cart>addToCart(@RequestBody Cart cart) {
+		Cart newCart = cService.addToCart(cart);
+        return new ResponseEntity<>(newCart, HttpStatus.CREATED);
 	}
 
     // delete cart rest api
 	@DeleteMapping("delete/{cartId}")
-	public void deleteCartById(@PathVariable("cartId") Long id){
+	public ResponseEntity<?> deleteCartById(@PathVariable("cartId") Long id){
 		cService.deleteCartById(id);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	
 	// update cart rest api
 	
 	@PutMapping("/update")
-	public void updateCart(@RequestBody Cart cart )
-		{ cService.updateCart(cart);
+	public ResponseEntity<Cart>updateCart(@RequestBody Cart cart ){
+		Cart updateCart = cService.updateCart(cart);
+		return new ResponseEntity<> (updateCart, HttpStatus.OK);
 		
 		
 		/*cart.setId(cartDetails.getId());
