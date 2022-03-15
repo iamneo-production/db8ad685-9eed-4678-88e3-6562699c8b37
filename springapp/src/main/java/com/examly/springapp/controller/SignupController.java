@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.examly.springapp.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.User;
-import com.example.demo.services.UserService;
+import com.examly.springapp.model.User;
+import com.examly.springapp.services.UserService;
 
 @CrossOrigin(origins="*")
 @RestController
