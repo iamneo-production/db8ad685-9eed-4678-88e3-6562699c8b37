@@ -7,9 +7,11 @@ export class SignupService {
 
   constructor(private http:HttpClient) { }
 
-  url = 'http://localhost:8080/signup';
+  url = "http://localhost:8090/api/v1/user";
 
-  signupService(signupData : any){
+  signupSave(signupData : any){
     return this.http.post<any>(this.url, signupData);
   }
+
 }
+

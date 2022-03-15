@@ -4,10 +4,16 @@ import { FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+//Angular Import by npm
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FlexLayoutModule } from '@angular/flex-layout';
+//Anugular Material Import
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//Angular Component Import
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
@@ -19,6 +25,12 @@ import { OrdersComponent } from './orders/orders.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDisplayComponent } from './user-display/user-display.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
+import { FooterHomepageComponent } from './footer-homepage/footer-homepage.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductDisplayComponent } from './product-display/product-display.component';
+import { ProductUpdateComponent } from './product-update/product-update.component';
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +44,12 @@ import { UserUpdateComponent } from './user-update/user-update.component';
     OrdersComponent,
     AdminDashboardComponent,
     UserDisplayComponent,
-    UserUpdateComponent 
+    UserUpdateComponent,
+    FooterHomepageComponent,
+    ProductAddComponent,
+    ProductDisplayComponent,
+    ProductUpdateComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -41,9 +58,12 @@ import { UserUpdateComponent } from './user-update/user-update.component';
     ReactiveFormsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

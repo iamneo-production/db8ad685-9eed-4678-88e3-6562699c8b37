@@ -9,6 +9,9 @@ import { OrdersComponent } from './orders/orders.component';
 import { UserDisplayComponent } from './user-display/user-display.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ProductDisplayComponent } from './product-display/product-display.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductUpdateComponent } from './product-update/product-update.component';
 
 const routes: Routes = [
   {path:"",redirectTo:'/login',pathMatch:'full'},
@@ -20,6 +23,9 @@ const routes: Routes = [
   {path: 'user', component: UserDisplayComponent},
   {path: 'update-user/:id', component: UserUpdateComponent},
   {path: 'dashboard', component:AdminDashboardComponent},
+  {path: 'display-product', component:ProductDisplayComponent},
+  {path: 'add-product', component:ProductAddComponent},
+  {path: 'update-product/:id', component:ProductUpdateComponent},
   {path:"**",component:NotFoundComponent}
 ];
 
