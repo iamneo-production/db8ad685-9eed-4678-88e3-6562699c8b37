@@ -1,8 +1,7 @@
 input.ng-invalid.ng-touched{
     border : 3px solid red;
     background-image: none;
-    background-color: rgb(195, 161, 226) ;
-    
+    background-color: rgb(195, 161, 226);   
 }
 .container{
     padding: 15px 15px;
@@ -11,24 +10,24 @@ input.ng-invalid.ng-touched{
     padding: 2px 2px;
     font-style: italic;
 }
-#loginBox{
-    margin-top: 25vh;
+#signupBox{
+    margin-top: 6vh;
 }
-#email, #password{
+#email,#username,#mobileNumber, #password, #confirmPassword {
     height: 7vh;
     background-image: linear-gradient(to right, white,rgb(157, 76, 233));
 }
 .button-tag{
     text-align: center;
 }
-#loginButton{
+#submitButton{
     background-color: rgb(82, 4, 155);
     border-radius: 5px;
     color: white;
     border: none;
 }
 .msg{
-    margin-top: 5vh;
+    margin-top: 2vh;
     text-align: center;
 }
 a{
