@@ -11,14 +11,16 @@
           </mat-card-header>
 
           <mat-card-content class="img-content">
+            <a href="details-product/{{product.id}}">
               <img mat-card-image src="{{product.product_img}}" height="355">
+            </a>
           </mat-card-content>
-
+        <!---
           <mat-card-content class="description-content">
             <p><i class="bi bi-info-circle-fill"></i>
               {{product.product_desc}}</p>
           </mat-card-content>
-
+--->
           <div class="priceQuantity-content">
               <p id="price-tag"><i class="bi bi-tags-fill"></i> &#8377;{{product.product_price}}</p>
           </div>

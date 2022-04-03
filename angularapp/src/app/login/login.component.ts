@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+//import { User } from '../user-service/user';
 import { LoginService } from './login.service';
 @Component({
   selector: 'app-login',
@@ -7,8 +9,8 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private formbuilder: FormBuilder,private loginService: LoginService) {}
+value:any;
+  constructor(private formbuilder: FormBuilder,private loginService: LoginService,private router:Router) {}
   emailRegex = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@" 
             + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
 
@@ -32,11 +34,19 @@ export class LoginComponent implements OnInit {
 
     this.loginService.loginService(this.loginForm.value)
 .subscribe(
-    response => console.log('Success!', response),
-    error => console.log('Error!', error)
+    response => console.log(this.value='Success!', response),
+    error => console.log(this.value='Error!', error)
 );
-  }
-
+if(this.value==='Success!'){
+ this.router.navigate(['/home']);
+}
+else
+{
+  console.log('Wrong Credentials')
+}
+}
+   
+  
   get email(){
     return this.loginForm.get('email');
   }

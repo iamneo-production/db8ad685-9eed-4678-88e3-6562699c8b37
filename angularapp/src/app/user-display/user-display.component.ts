@@ -10,7 +10,7 @@ import { UserService } from '../user-service/user.service';
 })
 export class UserDisplayComponent implements OnInit {
   user: User[] = [];
-  username: any
+  username: any;
   constructor(private userService:UserService,
     private router: Router) { }
 
@@ -36,7 +36,7 @@ this.getUser();
 }
 
  updateUser(id: any){
-   this.router.navigate(['update-user', id]);
+   this.router.navigate(['update-user',id]);
  }
  deleteUser(id: any){
   this.userService.deleteUser(id).subscribe( data => {

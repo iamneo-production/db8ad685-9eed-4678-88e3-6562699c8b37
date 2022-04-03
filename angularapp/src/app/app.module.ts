@@ -20,15 +20,20 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
-import { CartComponent } from './cart/cart.component';
-import { OrdersComponent } from './orders/orders.component';
+
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { UserDisplayComponent } from './user-display/user-display.component';
-import { UserUpdateComponent } from './user-update/user-update.component';
 import { FooterHomepageComponent } from './footer-homepage/footer-homepage.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductDisplayComponent } from './product-display/product-display.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartDetailsComponent } from './cart-details/cart-details.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { UserDisplayComponent } from './user-display/user-display.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
+
+;
 
 
 
@@ -40,16 +45,20 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
     NotFoundComponent,
     HomepageComponent,
     UserNavbarComponent,
-    CartComponent,
-    OrdersComponent,
+
     AdminDashboardComponent,
-    UserDisplayComponent,
-    UserUpdateComponent,
     FooterHomepageComponent,
     ProductAddComponent,
     ProductDisplayComponent,
-    ProductUpdateComponent
-    
+    ProductUpdateComponent,
+    ProductDetailsComponent,
+    CartDetailsComponent,
+    CheckoutComponent,
+    OrderHistoryComponent,
+    UserDisplayComponent,
+    UserUpdateComponent,
+  
+   
   ],
   imports: [
     BrowserModule,
@@ -63,7 +72,8 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
