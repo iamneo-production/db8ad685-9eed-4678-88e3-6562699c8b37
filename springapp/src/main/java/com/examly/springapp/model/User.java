@@ -1,5 +1,5 @@
 
-
+package com.examly.springapp.model;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;

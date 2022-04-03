@@ -17,6 +17,9 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -35,7 +38,10 @@ import { CartDetailsComponent } from './cart-details/cart-details.component';
     ProductAddComponent,
     ProductDetailsComponent,
     ProductUpdateComponent,
-    CartDetailsComponent
+    CartDetailsComponent,
+    CheckoutComponent,
+    OrderHistoryComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

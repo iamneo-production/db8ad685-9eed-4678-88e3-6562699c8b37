@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Cart } from '../cart-service/cart';
 import { CartService } from '../cart-service/cart.service';
+import { CartItem } from '../Models/cart-item';
+
 import { Product } from '../product-service/product';
 import { ProductService } from '../product-service/product.service';
 
@@ -33,7 +34,7 @@ export class HomepageComponent implements OnInit {
     console.log(`Adding to cart: ${theProduct.product_name}, ${theProduct.product_price}`);
 
     // TODO ... do the real work
-    const theCartItem = new Cart(theProduct);
+    const theCartItem = new CartItem(theProduct);
 
     this.cartService.addToCart(theCartItem);
   }

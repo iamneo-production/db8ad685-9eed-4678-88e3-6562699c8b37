@@ -1,40 +1,25 @@
 import { Injectable } from '@angular/core';
-
-import { BehaviorSubject, Subject } from 'rxjs';
-import { Cart } from './cart';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { Subject } from 'rxjs/internal/Subject';
+import { CartItem } from '../Models/cart-item';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  cartItems: Cart[] = [];
+  cartItems: CartItem[] = [];
 
   totalPrice: Subject<number> = new BehaviorSubject<number>(0);
   totalQuantity: Subject<number> = new BehaviorSubject<number>(0);
 
-  storage: any = sessionStorage;
-  // storage: Storage = localStorage;
+  constructor() { }
 
-  constructor() { 
-
-      // read data from storage
-      let data = JSON.parse(this.storage.getItem('cartItems'));
-
-      if (data != null) {
-        this.cartItems = data;
-        
-        // compute totals based on the data that is read from storage
-        this.computeCartTotals();
-      }
-
-  }
-
-  addToCart(theCartItem: Cart) {
+  addToCart(theCartItem: CartItem) {
 
     // check if we already have the item in our cart
     let alreadyExistsInCart: boolean = false;
-    let existingCartItem: any = undefined;
+    let existingCartItem:any;
 
     if (this.cartItems.length > 0) {
       // find the item in the cart based on item id
@@ -74,13 +59,6 @@ export class CartService {
 
     // log cart data just for debugging purposes
     this.logCartData(totalPriceValue, totalQuantityValue);
-
-    // persist cart data
-    this.persistCartItems();
-  }
-
-  persistCartItems() {
-    this.storage.setItem('cartItems', JSON.stringify(this.cartItems));
   }
 
   logCartData(totalPriceValue: number, totalQuantityValue: number) {
@@ -95,7 +73,7 @@ export class CartService {
     console.log('----');
   }
 
-  decrementQuantity(theCartItem: Cart) {
+  decrementQuantity(theCartItem: CartItem) {
 
     theCartItem.quantity--;
 
@@ -107,7 +85,7 @@ export class CartService {
     }
   }
 
-  remove(theCartItem: Cart) {
+  remove(theCartItem: CartItem) {
 
     // get index of item in the array
     const itemIndex = this.cartItems.findIndex( tempCartItem => tempCartItem.id === theCartItem.id );

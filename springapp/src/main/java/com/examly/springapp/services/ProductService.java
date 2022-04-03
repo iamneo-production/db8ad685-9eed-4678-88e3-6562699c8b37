@@ -1,9 +1,9 @@
-package com.example.demo.services;
+package com.examly.springapp.services;
 
 
 import java.util.List;
 
-import com.example.demo.model.Product;
+import com.examly.springapp.Product;
 
 public interface ProductService {
 	public List<Product> getAllProducts();
